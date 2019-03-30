@@ -78,19 +78,19 @@ var dataWriteToDisk = function(fileName, callback){
         dataToStore.push(callback(i));
       }
   }
-  fs.writeFile( __dirname + `/${fileName}.json`,
+  fs.writeFile( __dirname + `/data/${fileName}.json`,
          JSON.stringify(dataToStore), function(err){
     if (err) {
       throw err;
     } else {
-      console.log('Data write - SUCCESS');
+      console.log(`SUCCESS : File ${fileName} created`);
     }
   })
 
 };
 
-// dataWriteToDisk('ratings_ambience', data_ratings_ambience)
-// dataWriteToDisk('reviewer_info', data_reviewer_info)
+dataWriteToDisk('ratings_ambience', data_ratings_ambience)
+dataWriteToDisk('reviewer_info', data_reviewer_info)
 dataWriteToDisk('reviews', data_reviews);
 
 
@@ -124,7 +124,7 @@ dataWriteToDisk('reviews', data_reviews);
 // ratings_ambience.json
 
 var dataReadFromDisk = function(fileName){
-  fs.readFile( __dirname + `/${fileName}.json`, (err, data) => {
+  fs.readFile( __dirname + `/data/${fileName}.json`, (err, data) => {
       if (err) {
         console.error(' ERROR : Cannot read file');
       }
