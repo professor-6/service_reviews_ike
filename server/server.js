@@ -57,3 +57,30 @@ app.post('/data/reviews', function(req, res){
   }
 });
 
+
+// get all records
+app.get('/data/reviewer_info', function(req, res){
+  var queryString = `SELECT * FROM reviewer_info`;
+  db.query(queryString, function (err, results){
+    if (err){
+      console.error('ERROR : Could not seed database');
+      throw err;
+    }
+    console.log(`SUCCESS : Retrieved records from  database : opentable `)
+    res.send(results);
+  });
+});
+
+// get on record
+app.get('/data/reviewer_info/:id', function(req, res){
+  var queryString = `SELECT * FROM reviewer_info WHERE id = ?`;
+  db.query(queryString, req.params.id, function (err, results){
+    if (err){
+      console.error('ERROR : Could not seed database');
+      throw err;
+    }
+    console.log(`SUCCESS : Retrieved records from  database : opentable `)
+    res.send(results);
+  });
+});
+
