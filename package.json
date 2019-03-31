@@ -1,15 +1,27 @@
 {
-  "name": "",
+  "name": "FEC-OpenTable",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "Ike Okonkwo",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "build-dev": "webpack -d --watch",
+    "start-dev": "nodemon server/server.js -w data -w server",
+    "create-data" : "node database/data.js ",
+    "seed-db": "mysql -u root -p < database/schema.sql && node database/populateDB.js"
+
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "csv-parser": "^2.2.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
