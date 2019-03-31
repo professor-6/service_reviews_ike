@@ -3,50 +3,61 @@ const fs = require('fs');
 const db = require('./db');
 
 
-// var dataReadFromDisk = function(fileName){
-  fs.readFile( __dirname + `/reviewer_info.json`, (err, data) => {
+var dataReadFromDiskToDB = function(fileName, callback){
+  fs.readFile( __dirname + `/data/${fileName}.json`, (err, data) => {
       if (err) {
         console.error(' ERROR : Cannot read file');
       }
-      var  student = JSON.parse(data);
-      // console.log(student)
-      console.log(student[10]);
-      // return JSON.parse(data);
-      return student;
-      // console.log(student[1]);
+      var  data = JSON.parse(data);
+      var queryString = `INSERT INTO ${fileName} SET ?`;
 
-      var queryString = `INSERT INTO reviewer_info SET ?`;
-
-      // for(var i = 0  ; i < student.length ; i++) {
-        db.query(queryString, student, function (err, results){
+      for(var i = 0  ; i < data.length ; i++) {
+        db.query(queryString, data[i], function (err, results){
           if (err){
             console.error('ERROR : Could not seed database');
             throw err;
           }
-          console.log('SUCCESS : inserted records into database : ')
+          console.log(`SUCCESS : inserted records into table : ${fileName}`)
         });
-      // }
-      db.end();
+      }
+      // execute callback for table::ratings_ambience
+      if (fileName === 'ratings_ambience'){
+        callback();
+      }
   });
+};
 
+// pull restaurant name from restaurants_id_name.csv and insert into
+// table::ratings_ambience
+var upDateResName = function(){
 
-// };
+  var names = [];
 
+  fs.createReadStream(__dirname + '/data/restaurants_id_name.csv')
+    .pipe(csv())
+    .on('data', (row) => {
+      names.push(row)
+    })
+    .on('end', () => {
+      console.log('CSV file successfully processed');
+      for (var i = 0 ; i< names.length ; i++) {
+        var queryString = `UPDATE ratings_ambience
+                            SET restaurant_name = "${names[i].name}"
+                            WHERE id = ${i+1}`;
 
-// req.body = dataReadFromDisk('reviewer_info');
-// reviewer_info.json
-// reviews.json
-// ratings_ambience.json
+        db.query(queryString, function (err, results){
+          if (err){
+            console.error('ERROR : Could not seed database');
+            throw err;
+          }
+          console.log(`SUCCESS : inserted records into table : ratings_ambience`)
+        });
+      }
+    })
+}
 
-// data = dataReadFromDisk('reviewer_info');
+// read files fron disk and populate tables in  DB
+dataReadFromDiskToDB("reviewer_info");
+dataReadFromDiskToDB("reviews");
+dataReadFromDiskToDB("ratings_ambience", upDateResName);
 
-// console.log(data)
-
-
-// dataReadFromDisk('reviewer_info');
-// dataReadFromDisk('reviews');
-// dataReadFromDisk('ratings_ambience');
-
-// reviewer_info.json
-// reviews.json
-// ratings_ambience.json
