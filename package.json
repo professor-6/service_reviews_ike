@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "FEC-OpenTable",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "Ike Okonkwo",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
@@ -11,8 +11,7 @@
     "build-dev": "webpack -d --watch",
     "start-dev": "nodemon server/server.js -w data -w server",
     "create-data" : "node database/data.js ",
-    "create-db": "mysql -u root -p < database/schema.sql",
-    "seed-db": "mysql -u root -p < database/schema.sql"
+    "seed-db": "mysql -u root -p < database/schema.sql && node database/populateDB.js"
 
   },
   "dependencies": {
