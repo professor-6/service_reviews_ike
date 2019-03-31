@@ -7,7 +7,7 @@ USE opentable;
 CREATE TABLE IF NOT EXISTS ratings_ambience (
 
   id INT NOT NULL AUTO_INCREMENT,
-  -- restaurant_name VARCHAR(40) NOT NULL,
+  restaurant_name VARCHAR(40) ,
   restaurant_rating INT NOT NULL,
   food_rating INT NOT NULL,
   service_rating INT NOT NULL,
@@ -22,7 +22,6 @@ CREATE TABLE IF NOT EXISTS ratings_ambience (
 CREATE TABLE IF NOT EXISTS reviewer_info (
 
   id INT NOT NULL AUTO_INCREMENT,
-  restaurant_id  INT NOT NULL DEFAULT 1,
   dined_at VARCHAR(10) NOT NULL,
   reviewer_name VARCHAR(40) NOT NULL,
   reviewer_city VARCHAR(40) NOT NULL,
