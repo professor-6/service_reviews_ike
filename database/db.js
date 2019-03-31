@@ -5,17 +5,14 @@ var connection = mysql.createConnection({
   user : 'root',
   password : 'root',
   database : 'opentable'
-
 })
 
 connection.connect(function(err){
   if(err) {
     console.error('ERROR connecting to database');
-    return;
   } else {
     console.log(`Connection to MySQL established at : ${connection.threadId}`);
   }
-
 });
 
 module.exports = connection;
