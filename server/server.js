@@ -2,13 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const db = require('../database/db');
-// const dataReadFromDisk = require('../database/data');
 
 const app = express();
-const PORT = 4000;
+const PORT = 3000;
 
 // app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '50mb'}));
+
+app.use(express.static(__dirname + '/../client/dist'));
 
 app.listen(PORT, function(){
   console.log(`Listening on port : ${PORT}`);
