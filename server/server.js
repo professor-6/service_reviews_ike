@@ -71,11 +71,25 @@ app.get('/api/reviews/:id', function(req, res){
 
 
 // get all data for one restaurant
+app.get('/api/restaurants/', function(req, res){
+  var queryString = `SELECT * FROM ratings_ambience a
+                      JOIN reviewer_info  b ON a.id = b.id`;
+
+  db.query(queryString, req.params.id, function (err, results){
+    if (err){
+      console.error('ERROR : Could not seed database');
+      throw err;
+    }
+    console.log(`SUCCESS : Retrieved records from  database : opentable `)
+    res.send(results);
+  });
+});
+
+// get all data for one restaurant
 app.get('/api/restaurants/:id', function(req, res){
   var queryString = `SELECT * FROM ratings_ambience a
                       JOIN reviewer_info  b ON a.id = b.id
-                      JOIN reviews c ON a.id = c.restaurant_id
-                      WHERE id = ?`;
+                      WHERE a.id = ?`;
 
   db.query(queryString, req.params.id, function (err, results){
     if (err){
