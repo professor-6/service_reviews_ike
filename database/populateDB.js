@@ -57,7 +57,7 @@ var upDateResName = function(){
 }
 
 // read files fron disk and populate tables in  DB
-dataReadFromDiskToDB("reviewer_info");
+// dataReadFromDiskToDB("reviewer_info");
 dataReadFromDiskToDB("reviews");
 dataReadFromDiskToDB("ratings_ambience", upDateResName);
 
