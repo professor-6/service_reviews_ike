@@ -47,11 +47,6 @@ class Summary extends React.Component {
 
     return (
        <div >
-
-          {this.state.summaryInformation.map((data, i) => (
-            <div id="summary" key={data.id} >  What {data.id} People Are Saying</div>
-          ))}
-
           {this.state.summaryInformation.map((reviews, i) => (
             <div id="summary" key={reviews.restaurant_no_of_reviews} >  What {reviews.restaurant_no_of_reviews} People Are Saying</div>
           ))}
