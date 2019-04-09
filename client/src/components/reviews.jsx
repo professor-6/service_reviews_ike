@@ -6,41 +6,53 @@ class Reviews extends React.Component {
     super(props)
 
     this.state = {
-      reviews : []
+      reviews : [],
+      id : ''
     };
 
-    this.strDate = this.strDate.bind(this);
+    this.getURL = this.getURL.bind(this);
 
   }
 
     // fetching data from api/restaurants/:id end -point
     fetchSummary() {
-      fetch('http://localhost:3000/api/restaurants/4', {method: "GET"})
+
+      // urlID = window.location.href.split('3002/')[1];
+      // console.log(urlID , 'urlID');
+
+      fetch(`http://localhost:3002/6`, {method: "GET"})
       .then(response =>  response.json())
       .then(result => {
           this.setState({reviews : result});
-          // console.timeLog(result);
+          // console.log(result);
       });
 
-      // axios.get('http://localhost:3000/api/restaurants/4')
-      // .then(response =>  response.json())
-      // .then(result => {
-      //     this.setState({summaryInformation : result});
-      //     console.log(result);
-      // });
+
+    }
+
+    getURL(){
+      // console.log(window.location.href.split('3002/')[1]);
+      urlID = window.location.pathname;
+      this.setState({id : urlID});
+
     }
 
     componentDidMount() {
+
         this.fetchSummary();
-        // this.fetchCategories();
+        this.getURL();
     }
 
-   strDate(str){
-     date = new Date(str);
-     return date.toString().slice(4, 15);
-   }
+  //  strDate(str){
+  //    date = new Date(str);
+  //    return date.toString().slice(4, 15);
+  //  }
 
   render(){
+
+    // console.log(`http://localhost:3002/api/restaurants/${this.state.id}`);
+    // console.log(this.state.id)
+    // console.log(window.location.href.split('3002/')[1]);
 
     var sortOptions = ['Newest','Highest Rating','Lowest Rating'];
     var filterOptions = ['Good for groups','Prime Ribs(179)','Filet Mignon (94)','Calamari (40)','Pasta Paella (19)']
@@ -110,10 +122,14 @@ class Reviews extends React.Component {
 
                       <div className="ratingBlock">
                           <div  className="star" key={reviews.reviews}>
-                                {/* <div class="stars-outer">
-                                  <div class="stars-inner"></div>
-                                  <i className="fa fa-star" aria-hidden="true"></i>
-                                </div> */}
+                                <div class="stars">
+                                    <div class="stars-inner"></div>
+                                    <i className="fa fa-star" aria-hidden="true"></i>
+                                    <i className="fa fa-star" aria-hidden="true"></i>
+                                    <i className="fa fa-star" aria-hidden="true"></i>
+                                    <i className="fa fa-star" aria-hidden="true"></i>
+                                    <i className="fa fa-star" aria-hidden="true"></i>
+                                  </div>
                           </div>
 
                           <div  className="reviews" key={reviews.dined_at}>
@@ -149,6 +165,7 @@ class Reviews extends React.Component {
 
                       <div  className="reviews" key={reviews.reviews}>
                         {reviews.reviews}
+                        <p class="read-more"><a href="#" class="button"> + Read More</a></p>
                     </div>
 
                 </div>
@@ -159,10 +176,6 @@ class Reviews extends React.Component {
 
           ))}
 
-        <div class="stars-outer">
-          <div class="stars-inner"></div>
-          <i className="fa fa-star" aria-hidden="true"></i>
-        </div>
        </div>
 
       )
