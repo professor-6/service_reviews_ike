@@ -306,7 +306,7 @@ i {
 
 .reviews {
   overflow: hidden;
-  max-height: 50px;
+  /* max-height: 50px; */
   position: relative;
 }
 
