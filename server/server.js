@@ -49,6 +49,13 @@ app.get('/:id', function(req, res){
   res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
 
+// default route - redirect to /:id
+function handleRedirect(req, res) {
+  var redirectURL = "http://localhost:3002/1";
+  res.redirect(redirectURL);
+}
+app.get('*', handleRedirect);
+
 
 //========= FILTERS =================
  // newest

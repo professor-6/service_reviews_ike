@@ -42,8 +42,6 @@ class Summary extends React.Component {
 
             <div className="hline"></div>
 
-            <div className="vline"></div>
-
            <div>
 
               <div>
@@ -51,60 +49,120 @@ class Summary extends React.Component {
                     <div id="overall" > Overall rating and reviews</div>
 
                   <div className="graph">
-                    <div className="container">
-                      <div className="progress">
-                        <div className="bar5">5</div>
-                      </div>
-                    </div>
-
-                    <div className="container">
-                      <div className="progress">
-                        <div className="bar4">5</div>
-                      </div>
-                    </div>
 
 
-                    <div className="container">
-                      <div className="progress">
-                        <div className="bar3">5</div>
-                      </div>
+                  <div className="ratingChart">
+                        <div className="number">5</div>
+                        <div className="container">
+                          <div className="progress">
+                            <div className="bar5"></div>
+                          </div>
+                        </div>
                     </div>
 
-                    <div className="container">
-                      <div className="progress">
-                        <div className="bar2">5</div>
-                      </div>
+                    <div className="ratingChart">
+                        <div className="number">4</div>
+                        <div className="container">
+                          <div className="progress">
+                            <div className="bar4"></div>
+                          </div>
+                        </div>
                     </div>
 
-                    <div className="container">
-                      <div className="progress">
-                        <div className="bar1">5</div>
-                      </div>
+                     <div className="ratingChart">
+                        <div className="number">3</div>
+                        <div className="container">
+                          <div className="progress">
+                            <div className="bar3"></div>
+                          </div>
+                        </div>
                     </div>
+
+                    <div className="ratingChart">
+                        <div className="number">2</div>
+                        <div className="container">
+                          <div className="progress">
+                            <div className="bar2"></div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div className="ratingChart">
+                        <div className="number">1</div>
+                        <div className="container">
+                          <div className="progress">
+                            <div className="bar1"></div>
+                          </div>
+                        </div>
+                    </div>
+
                   </div>
 
                   <div id="overall_one" >Reviews can only be made by diners who have eaten at this restaurant </div>
 
-                  {this.state.summaryInformation.map((rating, i) => (
-                    <div id="recent" key={rating} > {rating.restaurant_rating} based on recent ratings</div>
-                    ))}
+                  <div className="overallRating">
+
+                        <div  className="star">
+                            <div class="stars">
+                                <div class="stars-inner"></div>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                              </div>
+                      </div>
+
+                      {this.state.summaryInformation.map((rating, i) => (
+                        <div id="recent" key={rating} > {rating.restaurant_rating} based on recent ratings</div>
+                        ))}
+
+
+                  </div>
+
 
 
                     {this.state.summaryInformation.map((rating, i) => (
                       <div id="ratingNumber" >
+
+                      <div  className="levelRating">
                         <div id="rating" key={rating.restaurant_food_rating}>{rating.restaurant_food_rating}</div>
+                        <div className="serviceLevel"> {ratingCategory[0]}</div>
+                      </div>
+
+                      <div className="vline"></div>
+
+
+                      <div  className="levelRating">
                         <div id="rating" key={rating.restaurant_service_rating}>{rating.restaurant_service_rating}</div>
+                        <div className="serviceLevel"> {ratingCategory[1]}</div>
+                     </div>
+
+                     <div className="vline"></div>
+
+
+                      <div  className="levelRating">
                         <div id="rating" key={rating.restaurant_ambience_rating}>{rating.restaurant_ambience_rating}</div>
+                        <div className="serviceLevel"> {ratingCategory[2]}</div>
+                      </div>
+
+                      <div className="vline"></div>
+
+
+                      <div  className="levelRating">
                         <div id="rating" key={rating.restaurant_value_rating}>{rating.restaurant_value_rating}</div>
+                        <div className="serviceLevel"> {ratingCategory[3]}</div>
+                      </div>
+
                       </div>
                     ))}
 
-                    <div className="ratingCategory">
+                    {/* <div className="ratingCategory">
                     {ratingCategory.map((category, i) => (
-                      <div key={i}>{category}</div>
+                      <div key={i}>{ratingCategory[0]}</div>
 
                     ) )}
-                    </div>
+                    </div> */}
 
 
                     <div className="noise">
