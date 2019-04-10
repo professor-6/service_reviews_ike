@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS opentable;
+DROP DATABASE IF EXISTS opentable_reviews;
 
-CREATE DATABASE opentable;
+CREATE DATABASE opentable_reviews;
 
-USE opentable;
+USE opentable_reviews;
 
 CREATE TABLE IF NOT EXISTS ratings_ambience (
 
