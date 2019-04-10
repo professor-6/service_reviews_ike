@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import styles from "../../dist/styles-review_summary.css";
 
 class Summary extends React.Component {
   constructor(props) {
