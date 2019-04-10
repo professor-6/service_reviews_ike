@@ -50,11 +50,11 @@ app.get('/:id', function(req, res){
 });
 
 // default route - redirect to /:id
-function handleRedirect(req, res) {
-  var redirectURL = "http://localhost:3002/1";
-  res.redirect(redirectURL);
-}
-app.get('*', handleRedirect);
+// function handleRedirect(req, res) {
+//   var redirectURL = "http://localhost:3002/1";
+//   res.redirect(redirectURL);
+// }
+// app.get('*', handleRedirect);
 
 
 //========= FILTERS =================
