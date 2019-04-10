@@ -1,13 +1,7 @@
 import React from 'react';
-import axios from 'axios';
-
-// import '../../dist/style.css';
-
-// import noise from "../../images/noise.png";
+// import axios from 'axios';
 
 class Summary extends React.Component {
-
-
   constructor(props) {
     super(props);
 
@@ -18,32 +12,27 @@ class Summary extends React.Component {
     // this.handleChange = this.handleChange.bind(this);
   }
 
-
   // fetching data from api/restaurants/:id end -point
-  fetchSummary() {
-    fetch('http://localhost:3002/api/ratings_ambience/6', {method: "GET"})
+  fetchSummaryInfo() {
+
+    var item_id = window.location.href.split('/').pop();
+    console.log(item_id , 'urlID');
+
+    fetch(`http://localhost:3002/ratings_ambience/${item_id}`, {method : "GET" })
     .then(response =>  response.json())
     .then(result => {
         this.setState({summaryInformation : result});
-        // console.timeLog(result);
     });
-
   }
 
   componentDidMount() {
-      this.fetchSummary();
-      // this.fetchCategories();
+      this.fetchSummaryInfo();
   }
-
-
 
   render(){
 
     var ratingCategory = ['Food','Service','Ambience','Value'];
     var lovedForOptions = ['Great For Lunch','American','Most Booked'];
-
-
-    console.log(this.state.summaryInformation[0]);
 
     return (
        <div >

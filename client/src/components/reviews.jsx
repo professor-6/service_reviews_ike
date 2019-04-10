@@ -9,50 +9,23 @@ class Reviews extends React.Component {
       reviews : [],
       id : ''
     };
-
-    this.getURL = this.getURL.bind(this);
-
   }
-
     // fetching data from api/restaurants/:id end -point
-    fetchSummary() {
+    fetchData() {
+      var item_id = window.location.href.split('/').pop();
 
-      // urlID = window.location.href.split('3002/')[1];
-      // console.log(urlID , 'urlID');
-
-      fetch(`http://localhost:3002/6`, {method: "GET"})
+      fetch(`http://localhost:3002/reviews/${item_id}`, {method: "GET"})
       .then(response =>  response.json())
       .then(result => {
           this.setState({reviews : result});
-          // console.log(result);
       });
-
-
-    }
-
-    getURL(){
-      // console.log(window.location.href.split('3002/')[1]);
-      urlID = window.location.pathname;
-      this.setState({id : urlID});
-
     }
 
     componentDidMount() {
-
-        this.fetchSummary();
-        this.getURL();
+        this.fetchData();
     }
 
-  //  strDate(str){
-  //    date = new Date(str);
-  //    return date.toString().slice(4, 15);
-  //  }
-
   render(){
-
-    // console.log(`http://localhost:3002/api/restaurants/${this.state.id}`);
-    // console.log(this.state.id)
-    // console.log(window.location.href.split('3002/')[1]);
 
     var sortOptions = ['Newest','Highest Rating','Lowest Rating'];
     var filterOptions = ['Good for groups','Prime Ribs(179)','Filet Mignon (94)','Calamari (40)','Pasta Paella (19)']
