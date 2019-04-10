@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
 
       <div>
-         <div className="app">
+         <div className="Reviews">
            <Summary />
            <Reviews />
          </div>
