@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
 
       <div>
-         <div className="Reviews">
+         <div className="app-reviews">
            <Summary />
            <Reviews />
          </div>
@@ -21,5 +21,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('Reviews'));
+ReactDOM.render(<App />, document.getElementById('app-reviews'));
 
