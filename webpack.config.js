@@ -25,7 +25,23 @@ module.exports = {
           'url-loader?limit=10000',
           'img-loader'
         ]
+      },
+
+      {
+        test: /\.css$/,
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIndentName: '[name]__[local]__[hash:base64:5]'
+            }
+          }
+        ]
       }
+
     ]
   }
 };
