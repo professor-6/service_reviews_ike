@@ -3,7 +3,7 @@
 
  .reviewsSummary {
   font-family: Josefin Sans;
-  max-width: 600px;
+  max-width: 608px;
   margin-left: 360px;
 
  }
@@ -140,10 +140,10 @@ i {
   max-width: 20px;
 }
 
-img {
+/* img {
   margin-left: 5px;
   max-width: 20px;
-}
+} */
 
 .lovedFor {
   display: grid;

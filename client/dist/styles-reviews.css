@@ -167,7 +167,7 @@
 
 .mainReviewsDiv {
   font-family: Josefin Sans;
-  max-width: 600px;
+  max-width: 608px;
   margin-left: 360px;
  }
 
@@ -257,7 +257,7 @@ i {
  border-color: black; */
 }
 
-/* img .picture  {
+/* .picture  {
  clip-path: circle(40px at center);
  display: flex;
  justify-content: center;
