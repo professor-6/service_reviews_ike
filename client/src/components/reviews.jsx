@@ -1,6 +1,6 @@
 import React from 'react';
 // import styles from "../../dist/style.css";
-// import styles from "../../dist/styles-reviews.css";
+import style from "../../dist/styles-reviews.css";
 
 
 class Reviews extends React.Component {
@@ -36,29 +36,29 @@ class Reviews extends React.Component {
     return (
        <div>
 
-          <div className="hline"></div>
+          <div className={style.hline}></div>
 
 
-          <div className="sortPrompt"> Sort by
+          <div className={style.sortPrompt}> Sort by
           </div>
 
 
-          <div className="selector">
-             <select className="dropdown">
+          <div className={style.selector}>
+             <select className={style.dropdown}>
                 {sortOptions.map((option, i) => (
                    <option value={option}>{option}</option>
           ))}
              </select>
          </div>
 
-         <div className="filterPrompt"> Filters
+         <div className={style.filterPrompt}> Filters
           </div>
 
 
-          <div className="filterAll">
+          <div className={style.filterAll}>
           {filterOptions.map((options, i) => (
-              <div className="filterOptions" key={options}>
-              <input type="checkbox" id="filterCheckBox"></input>
+              <div className={style.filterOptions} key={options}>
+              <input type="checkbox" id={style.filterCheckBox}></input>
               {options}
               </div>
           ))}
@@ -67,39 +67,39 @@ class Reviews extends React.Component {
 
 
         {this.state.reviews.map((reviews, i) => (
-            <div id="reviewsAll">
-                <div className="avatar">
+            <div id={style.reviewsAll}>
+                <div className={style.avatar}>
 
-                  <div className="picture" key={reviews.reviewer_picture}>
+                  <div className={style.picture} key={reviews.reviewer_picture}>
                       <img src={reviews.reviewer_picture} />
                   </div>
 
-                  <div  className="name" key={reviews.reviewer_name}>
+                  <div  className={style.name} key={reviews.reviewer_name}>
                       {reviews.reviewer_name}
                   </div>
 
-                  <div  className="city" key={reviews.reviewer_city}>
+                  <div  className={style.city} key={reviews.reviewer_city}>
                       {reviews.reviewer_city}
                   </div>
 
-                  <div className="no_of_reviewsBlock">
-                        <div className="reviewsImage">
+                  <div className={style.no_of_reviewsBlock}>
+                        <div className={style.reviewsImage}>
                               <img src={"../../images/reviews.png"} />
                           </div>
 
-                        <div  className="no_of_reviews" key={reviews.no_of_reviews}>
+                        <div  className={style.no_of_reviews} key={reviews.no_of_reviews}>
                             {reviews.no_of_reviews} reviews
                         </div>
                 </div>
 
                 </div>
 
-                <div className="mainRating">
+                <div className={style.mainRating}>
 
-                      <div className="ratingBlock">
-                          <div  className="star" key={reviews.reviews}>
-                                <div class="stars">
-                                    <div class="stars-inner"></div>
+                      <div className={style.ratingBlock}>
+                          <div  className={style.star} key={reviews.reviews}>
+                                <div class={style.stars}>
+                                    <div class={style.starsInner}></div>
                                     <i className="fa fa-star" aria-hidden="true"></i>
                                     <i className="fa fa-star" aria-hidden="true"></i>
                                     <i className="fa fa-star" aria-hidden="true"></i>
@@ -108,7 +108,7 @@ class Reviews extends React.Component {
                                   </div>
                           </div>
 
-                          <div  className="reviews" key={reviews.dined_at}>
+                          <div  className={style.reviews} key={reviews.dined_at}>
                               {/* Dined on {strDate(reviews.dined_at)} */}
                               {/* Dined on {Date.parse(reviews.dined_at)} */}
                               Dined on {reviews.dined_at}
@@ -117,36 +117,36 @@ class Reviews extends React.Component {
                           </div>
                     </div>
 
-                    <div className="reviewBlock">
-                          <div  className="overallRating" key={reviews.overall_rating}>
-                              <span id="ratingText"> Overall </span>
-                              <span className="reviewRating">{parseInt(reviews.overall_rating)} -</span>
+                    <div className={style.reviewBlock}>
+                          <div  className={style.overallRating} key={reviews.overall_rating}>
+                              <span id={style.ratingText}> Overall </span>
+                              <span className={style.reviewRating}>{parseInt(reviews.overall_rating)} -</span>
                           </div>
 
-                          <div  className="foodRating" key={reviews.food_rating}>
-                               <span id="ratingText"> Food  </span>
-                               <span className="reviewRating">{parseInt(reviews.food_rating)} - </span>
+                          <div  className={style.foodRating} key={reviews.food_rating}>
+                               <span id={style.ratingText}> Food  </span>
+                               <span className={style.reviewRating}>{parseInt(reviews.food_rating)} - </span>
                           </div>
 
-                          <div  className="serviceRating" key={reviews.service_rating}>
-                              <span id="ratingText">  Service  </span>
-                               <span className="reviewRating">{parseInt(reviews.service_rating)} - </span>
+                          <div  className={style.serviceRating} key={reviews.service_rating}>
+                              <span id={style.ratingText}>  Service  </span>
+                               <span className={style.reviewRating}>{parseInt(reviews.service_rating)} - </span>
                           </div>
 
-                          <div  className="ambienceRating" key={reviews.ambience_rating}>
-                              <span id="ratingText"> Ambience  </span>
-                              <span className="reviewRating">{parseInt(reviews.ambience_rating)} </span>
+                          <div  className={style.ambienceRating} key={reviews.ambience_rating}>
+                              <span id={style.ratingText}> Ambience  </span>
+                              <span className={style.reviewRating}>{parseInt(reviews.ambience_rating)} </span>
                           </div>
                     </div>
 
-                      <div  className="reviews" key={reviews.reviews}>
+                      <div  className={style.reviews} key={reviews.reviews}>
                         {reviews.reviews}
-                        <p class="read-more"><a href="#" class="button"> + Read More</a></p>
+                        {/* <p className={style.readMore}><a href="#" className={style.button}> + Read More</a></p> */}
                     </div>
 
                 </div>
 
-                <div className="hline"></div>
+                <div className={style.hline}></div>
 
           </div>
 
