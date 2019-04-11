@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css?family=Josefin Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin Sans');
 
 
  body {
@@ -243,26 +243,21 @@ i {
   margin-top: 60px;
   margin-bottom: 10px;
 }
-
 i {
   color:  #da3743;
 }
-
 .dropdown {
   width: 280px;
   height: 40px;
   margin-bottom: 20px;
   background-color: transparent;
 }
-
 .dropdown:hover  {
   border-color: #da3743;
   cursor: pointer;
 }
-
 .filterPrompt{
   margin-bottom: 20px;
-
 }
 .filterOptions{
   width: 150px;
@@ -272,32 +267,27 @@ i {
   border-width: thin;
   align-items: center;
 }
-
 .filterOptions:hover  {
   color: #da3743;
   border-color: #da3743;
   cursor: pointer;
 }
-
 #filterCheckBox {
   border-style: solid;
   border-width: thin;
   border-color: black;
 }
-
 .filterAll{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5px;
   align-items: center;
 }
-
 #reviewsAll {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
 }
-
 .avatar {
   width: 150px;
   height: 200px;
@@ -306,7 +296,6 @@ i {
   border-color: black;
   align-content:top;
 }
-
 .mainRating {
   width: 475px;
   height: 200px;
@@ -314,45 +303,35 @@ i {
   border-width: thin;
   border-color: black;
 }
-
 .picture {
   clip-path: circle(40px at center);
   display: flex;
   justify-content: center;
 }
-
 .name{
   display: flex;
   justify-content: center;
-
 }
-
 .city{
   display: flex;
   justify-content: center;
-
 }
-
 .no_of_reviewsBlock {
   display: flex;
   justify-content: center;
 }
-
 .no_of_reviews{
   display: flex;
   justify-content: center;
 }
-
 .reviewRating {
   color: #da3743;
 }
-
 .ratingBlock{
   width: 300px;
   justify-content: center;
   margin-bottom: 10px;
 }
-
 .reviews .avatar {
   color: #2d333f;
 }
@@ -361,17 +340,14 @@ i {
   justify-content: left;
   margin-bottom: 20px;
 }
-
 #ratingText {
   font-weight: bold;
 }
-
 .reviews {
   overflow: hidden;
   max-height: 50px;
   position: relative;
 }
-
 .reviews .read-more {
   position: absolute;
   bottom: 0;
@@ -379,9 +355,7 @@ i {
   width: 100%;
   text-align: center;
   margin: 0; padding: 30px 0;
-
   "transparent" only works here because == rgba(0,0,0,0)
   background-image: linear-gradient(to bottom, transparent, black);
 }
-
 */

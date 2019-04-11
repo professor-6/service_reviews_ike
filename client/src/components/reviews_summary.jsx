@@ -1,5 +1,7 @@
 import React from 'react';
-import styles from "../../dist/styles-review_summary.css";
+// import styles from "../../dist/style.css";
+// import styles from "../../dist/styles-reviews.css";
+
 
 class Summary extends React.Component {
   constructor(props) {
@@ -160,7 +162,6 @@ class Summary extends React.Component {
                     {/* <div className="ratingCategory">
                     {ratingCategory.map((category, i) => (
                       <div key={i}>{ratingCategory[0]}</div>
-
                     ) )}
                     </div> */}
 
@@ -215,4 +216,3 @@ class Summary extends React.Component {
   }
 
   export default Summary;
-
