@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin Sans');
 
 
- .reviewsSummary {
+body  {
   font-family: Josefin Sans;
+ }
+
+
+ .reviewsSummary {
   max-width: 600px;
   margin-left: 360px;
 
@@ -66,7 +70,6 @@ i {
 
 #ratingNumber {
   display: flex;
-  /* justify-content: center; */
   -webkit-column-count: 4; /* Chrome, Safari, Opera */
   -moz-column-count: 4; /* Firefox */
   column-count: 4;
@@ -141,8 +144,8 @@ i {
 }
 
 img {
-  margin-left: 5px;
-  max-width: 20px;
+  margin-right: 5px;
+  max-width: 5px;
 }
 
 .lovedFor {

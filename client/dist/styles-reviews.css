@@ -320,6 +320,11 @@ i {
  position: relative;
 }
 
+.reviewCountImage {
+  margin-right: 5px;
+  max-width: 5px;
+}
+
 .reviews .readMore {
  position: absolute;
  bottom: 0;
