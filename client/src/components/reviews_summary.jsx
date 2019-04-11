@@ -168,12 +168,14 @@ class Summary extends React.Component {
 
                     <div className={style.noise}>
                         <img src={"../../images/noise.png"} />
+                        {/* <img className={style.noiseImage} src="https://cdn0.iconfinder.com/data/icons/speaker-4/200/1097-512.png" /> */}
                         Noise - Moderate
                     </div>
 
                    {this.state.summaryInformation.map((recommend, i) => (
                     <div className={style.recommend} key={recommend.percent_recommend}>
                       <img src={"../../images/recommend.png"} />
+                      {/* <img  src="https://png.pngtree.com/svg/20161220/9e37c64b9c.svg" /> */}
                       {recommend.percent_recommend}% of people would recommend to a friend
                     </div>
                    ))}
@@ -186,14 +188,18 @@ class Summary extends React.Component {
          <div>
             <div id={style.lovedfor}>
                Loved for
-              <img id={style.img_lovedfor} src={"../../images/lovedfor.png"} />
+              <img className={style.imgLovedfor} src={"../../images/lovedfor.png"} />
+              {/* <img className={style.imgLovedfor} src="https://spng.pngfly.com/20180331/evq/kisspng-exclamation-mark-symbol-computer-icons-circle-warn-exclamation-mark-5abfc772ad0717.0800397915225178747087.jpg" /> */}
+
             </div>
          </div>
 
           <div className={style.lovedFor}>
           {lovedForOptions.map((options, i) => (
               <div className={style.lovedForOptions} key={options}>
-                <img id={style.img_lovedfor_icon} src={"../../images/loved.png"} />
+                <img className={style.img_lovedfor_icon} src={"../../images/loved.png"} />
+                {/* <img className={style.img_lovedfor_icon} src="https://comps.canstockphoto.com/trophy-icon-on-white-background-eps-vector_csp51397181.jpg" /> */}
+
               {options}
                   <div className={style.subCity}> San Jose / Silicon Valley </div>
               </div>

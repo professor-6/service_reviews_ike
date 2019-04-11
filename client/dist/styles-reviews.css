@@ -254,10 +254,16 @@ i {
  border-color: black; */
 }
 
-.picture {
+/* img .picture  {
  clip-path: circle(40px at center);
  display: flex;
  justify-content: center;
+} */
+
+.reviewerPicture {
+  clip-path: circle(40px at center);
+  display: flex;
+  justify-content: center;
 }
 
 .name{
