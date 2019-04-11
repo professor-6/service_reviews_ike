@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin Sans');
 
 
-body {
-  font-family: Josefin Sans;
-  max-width: 600px;
-  margin-left: 360px;
 
-
-}
 
 #summary {
  font-weight: bold;
@@ -15,15 +9,7 @@ body {
  color: #2d333f;
 }
 
-.hline {
- display: block;
- height: 1px;
- border: 0;
- border-top: 1px solid #ccc;
- margin: 1em 0;
- margin-bottom: 20px;
- padding: 0;
-}
+
 
 #overall {
  font-weight: bold;
@@ -178,6 +164,23 @@ body {
 }
 
 /* =============== Reviews Component ============== */
+
+.mainReviewsDiv {
+  font-family: Josefin Sans;
+  max-width: 600px;
+  margin-left: 360px;
+ }
+
+ .hline {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  margin-bottom: 20px;
+  padding: 0;
+ }
+
 .sortPrompt {
  margin-top: 60px;
  margin-bottom: 10px;
