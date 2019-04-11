@@ -1,6 +1,6 @@
 import React from 'react';
 // import styles from "../../dist/style.css";
-// import styles from "../../dist/styles-reviews.css";
+import style from "../../dist/styles-reviews.css";
 
 
 class Summary extends React.Component {
@@ -39,74 +39,74 @@ class Summary extends React.Component {
     return (
        <div >
           {this.state.summaryInformation.map((reviews, i) => (
-            <div id="summary" key={reviews.restaurant_no_of_reviews} >  What {reviews.restaurant_no_of_reviews} People Are Saying</div>
+            <div id={style.summary} key={reviews.restaurant_no_of_reviews} >  What {reviews.restaurant_no_of_reviews} People Are Saying</div>
           ))}
 
-            <div className="hline"></div>
+            <div className={style.hline}></div>
 
            <div>
 
               <div>
 
-                    <div id="overall" > Overall rating and reviews</div>
+                    <div id={style.overall} > Overall rating and reviews</div>
 
-                  <div className="graph">
+                  <div className={style.graph}>
 
 
-                  <div className="ratingChart">
-                        <div className="number">5</div>
-                        <div className="container">
-                          <div className="progress">
-                            <div className="bar5"></div>
+                  <div className={style.ratingChart}>
+                        <div className={style.number}>5</div>
+                        <div className={style.container}>
+                          <div className={style.progress}>
+                            <div className={style.bar5}></div>
                           </div>
                         </div>
                     </div>
 
-                    <div className="ratingChart">
-                        <div className="number">4</div>
-                        <div className="container">
-                          <div className="progress">
-                            <div className="bar4"></div>
+                    <div className={style.ratingChart}>
+                        <div className={style.number}>4</div>
+                        <div className={style.container}>
+                          <div className={style.progress}>
+                            <div className={style.bar4}></div>
                           </div>
                         </div>
                     </div>
 
-                     <div className="ratingChart">
-                        <div className="number">3</div>
-                        <div className="container">
-                          <div className="progress">
-                            <div className="bar3"></div>
+                     <div className={style.ratingChart}>
+                        <div className={style.number}>3</div>
+                        <div className={style.container}>
+                          <div className={style.progress}>
+                            <div className={style.bar3}></div>
                           </div>
                         </div>
                     </div>
 
-                    <div className="ratingChart">
-                        <div className="number">2</div>
-                        <div className="container">
-                          <div className="progress">
-                            <div className="bar2"></div>
+                    <div className={style.ratingChart}>
+                        <div className={style.number}>2</div>
+                        <div className={style.container}>
+                          <div className={style.progress}>
+                            <div className={style.bar2}></div>
                           </div>
                         </div>
                     </div>
 
-                    <div className="ratingChart">
-                        <div className="number">1</div>
-                        <div className="container">
-                          <div className="progress">
-                            <div className="bar1"></div>
+                    <div className={style.ratingChart}>
+                        <div className={style.number}>1</div>
+                        <div className={style.container}>
+                          <div className={style.progress}>
+                            <div className={style.bar1}></div>
                           </div>
                         </div>
                     </div>
 
                   </div>
 
-                  <div id="overall_one" >Reviews can only be made by diners who have eaten at this restaurant </div>
+                  <div id={style.overall_one}>Reviews can only be made by diners who have eaten at this restaurant </div>
 
-                  <div className="overallRating">
+                  <div className={style.overallRating}>
 
-                        <div  className="star">
-                            <div class="stars">
-                                <div class="stars-inner"></div>
+                        <div  className={style.star}>
+                            <div className={style.stars}>
+                                <div className={style.starsInner}></div>
                                 <i className="fa fa-star" aria-hidden="true"></i>
                                 <i className="fa fa-star" aria-hidden="true"></i>
                                 <i className="fa fa-star" aria-hidden="true"></i>
@@ -116,7 +116,7 @@ class Summary extends React.Component {
                       </div>
 
                       {this.state.summaryInformation.map((rating, i) => (
-                        <div id="recent" key={rating} > {rating.restaurant_rating} based on recent ratings</div>
+                        <div id={style.recent} key={rating} > {rating.restaurant_rating} based on recent ratings</div>
                         ))}
 
 
@@ -125,54 +125,54 @@ class Summary extends React.Component {
 
 
                     {this.state.summaryInformation.map((rating, i) => (
-                      <div id="ratingNumber" >
+                      <div id={style.ratingNumber} >
 
-                      <div  className="levelRating">
-                        <div id="rating" key={rating.restaurant_food_rating}>{rating.restaurant_food_rating}</div>
-                        <div className="serviceLevel"> {ratingCategory[0]}</div>
+                      <div  className={style.levelRating}>
+                        <div id={style.rating} key={rating.restaurant_food_rating}>{rating.restaurant_food_rating}</div>
+                        <div className={style.serviceLevel}> {ratingCategory[0]}</div>
                       </div>
 
-                      <div className="vline"></div>
+                      <div className={style.vline}></div>
 
 
-                      <div  className="levelRating">
-                        <div id="rating" key={rating.restaurant_service_rating}>{rating.restaurant_service_rating}</div>
-                        <div className="serviceLevel"> {ratingCategory[1]}</div>
+                      <div  className={style.levelRating}>
+                        <div id={style.rating} key={rating.restaurant_service_rating}>{rating.restaurant_service_rating}</div>
+                        <div className={style.serviceLevel}> {ratingCategory[1]}</div>
                      </div>
 
-                     <div className="vline"></div>
+                     <div className={style.vline}></div>
 
 
-                      <div  className="levelRating">
-                        <div id="rating" key={rating.restaurant_ambience_rating}>{rating.restaurant_ambience_rating}</div>
-                        <div className="serviceLevel"> {ratingCategory[2]}</div>
+                      <div  className={style.levelRating}>
+                        <div id={style.rating} key={rating.restaurant_ambience_rating}>{rating.restaurant_ambience_rating}</div>
+                        <div className={style.serviceLevel}> {ratingCategory[2]}</div>
                       </div>
 
-                      <div className="vline"></div>
+                      <div className={style.vline}></div>
 
 
-                      <div  className="levelRating">
-                        <div id="rating" key={rating.restaurant_value_rating}>{rating.restaurant_value_rating}</div>
-                        <div className="serviceLevel"> {ratingCategory[3]}</div>
+                      <div  className={style.levelRating}>
+                        <div id={style.rating} key={rating.restaurant_value_rating}>{rating.restaurant_value_rating}</div>
+                        <div className={style.serviceLevel}> {ratingCategory[3]}</div>
                       </div>
 
                       </div>
                     ))}
 
-                    {/* <div className="ratingCategory">
+                    {/* <div className={style.ratingCategory}>
                     {ratingCategory.map((category, i) => (
                       <div key={i}>{ratingCategory[0]}</div>
                     ) )}
                     </div> */}
 
 
-                    <div className="noise">
+                    <div className={style.noise}>
                         <img src={"../../images/noise.png"} />
                         Noise - Moderate
                     </div>
 
                    {this.state.summaryInformation.map((recommend, i) => (
-                    <div className="recommend" key={recommend.percent_recommend}>
+                    <div className={style.recommend} key={recommend.percent_recommend}>
                       <img src={"../../images/recommend.png"} />
                       {recommend.percent_recommend}% of people would recommend to a friend
                     </div>
@@ -184,25 +184,25 @@ class Summary extends React.Component {
 
 
          <div>
-            <div id="lovedfor">
+            <div id={style.lovedfor}>
                Loved for
-              <img id="img_lovedfor" src={"../../images/lovedfor.png"} />
+              <img id={style.img_lovedfor} src={"../../images/lovedfor.png"} />
             </div>
          </div>
 
-         <div className="lovedFor">
+          <div className={style.lovedFor}>
           {lovedForOptions.map((options, i) => (
-              <div className="lovedForOptions" key={options}>
-                <img id="img_lovedfor_icon" src={"../../images/loved.png"} />
+              <div className={style.lovedForOptions} key={options}>
+                <img id={style.img_lovedfor_icon} src={"../../images/loved.png"} />
               {options}
-                  <div className="subCity"> San Jose / Silicon Valley </div>
+                  <div className={style.subCity}> San Jose / Silicon Valley </div>
               </div>
           ))}
           </div>
 
 
          <div>
-            <div className="bottomTag">
+            <div className={style.bottomTag}>
                Best Restaurant in Santa Clara >
              </div>
 

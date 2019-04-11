@@ -28,7 +28,6 @@
 
 .vline {
   display: block;
-
   border-left: 1px solid #ccc;
   height: 35px;
   padding: 2px;
@@ -174,6 +173,9 @@ i {
   border-width: thin;
   border-color: gray;
   background-color: #f1f2f4;
+  float : left;
+
+
  }
 
 /* .container:hover {
@@ -224,12 +226,12 @@ i {
 
 .ratingChart {
   display: flex;
-  justify-content: left;
-
+  float: left;
 }
 
 .number {
   margin-right: 15px;
+  float : left;
 }
 
 .ratingChart:hover {
