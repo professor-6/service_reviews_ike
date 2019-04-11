@@ -118,6 +118,11 @@ i {
   color : #da3743;
 }
 
+.noiseImage {
+  margin-left: 5px;
+  max-width: 20px;
+}
+
 .recommend {
   margin-bottom: 30px
 }
@@ -126,9 +131,15 @@ i {
   color : #da3743;
 }
 
-#img_lovedfor {
-  align-items: center;
+.imgLovedfor {
+  display: block;
+  max-width: 20px;
 }
+
+/* img {
+  margin-left: 5px;
+  max-width: 20px;
+} */
 
 .lovedFor {
   display: grid;
@@ -150,6 +161,12 @@ i {
   border-color: #da3743;
   border-width: medium;
   cursor: pointer;
+}
+
+.img_lovedfor_icon {
+  width: 5px;
+  height: auto;
+
 }
 
 .bottomTag  {
