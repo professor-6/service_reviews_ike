@@ -34,7 +34,7 @@ class Reviews extends React.Component {
     var filterOptions = ['Good for groups','Prime Ribs(179)','Filet Mignon (94)','Calamari (40)','Pasta Paella (19)']
 
     return (
-       <div>
+       <div className={style.mainReviewsDiv} >
 
           <div className={style.hline}></div>
 
