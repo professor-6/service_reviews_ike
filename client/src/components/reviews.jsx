@@ -85,7 +85,7 @@ class Reviews extends React.Component {
                   <div className={style.no_of_reviewsBlock}>
                         <div className={style.reviewsImage}>
                               {/* <img src={"../../images/reviews.png"} /> */}
-                              {/* <img className={style.reviewCountImage} src="//cdn.onlinewebfonts.com/svg/img_269301.png" /> */}
+                              <img className={style.reviewCountImage} src="//cdn.onlinewebfonts.com/svg/img_269301.png" />
 
                           </div>
 
