@@ -28,7 +28,6 @@
 
 .vline {
   display: block;
-
   border-left: 1px solid #ccc;
   height: 35px;
   padding: 2px;
@@ -119,6 +118,11 @@ i {
   color : #da3743;
 }
 
+.noiseImage {
+  margin-left: 5px;
+  max-width: 20px;
+}
+
 .recommend {
   margin-bottom: 30px
 }
@@ -127,9 +131,15 @@ i {
   color : #da3743;
 }
 
-#img_lovedfor {
-  align-items: center;
+.imgLovedfor {
+  display: block;
+  max-width: 20px;
 }
+
+/* img {
+  margin-left: 5px;
+  max-width: 20px;
+} */
 
 .lovedFor {
   display: grid;
@@ -153,6 +163,12 @@ i {
   cursor: pointer;
 }
 
+.img_lovedfor_icon {
+  width: 5px;
+  height: auto;
+
+}
+
 .bottomTag  {
   color:  #da3743;
   margin-bottom: 20px;
@@ -174,6 +190,9 @@ i {
   border-width: thin;
   border-color: gray;
   background-color: #f1f2f4;
+  float : left;
+
+
  }
 
 /* .container:hover {
@@ -224,12 +243,12 @@ i {
 
 .ratingChart {
   display: flex;
-  justify-content: left;
-
+  float: left;
 }
 
 .number {
   margin-right: 15px;
+  float : left;
 }
 
 .ratingChart:hover {

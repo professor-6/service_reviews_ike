@@ -254,10 +254,16 @@ i {
  border-color: black; */
 }
 
-.picture {
+/* img .picture  {
  clip-path: circle(40px at center);
  display: flex;
  justify-content: center;
+} */
+
+.reviewerPicture {
+  clip-path: circle(40px at center);
+  display: flex;
+  justify-content: center;
 }
 
 .name{
@@ -311,7 +317,7 @@ i {
  position: relative;
 }
 
-.reviews .read-more {
+.reviews .readMore {
  position: absolute;
  bottom: 0;
  left: 0;
@@ -320,6 +326,6 @@ i {
  margin: 0; padding: 30px 0;
 
  /* "transparent" only works here because == rgba(0,0,0,0) */
- background-image: linear-gradient(to bottom, transparent, black);
+ background-image: linear-gradient(to bottom, transparent, white);
 }
 /* ======================= STARS ================= */
