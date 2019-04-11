@@ -35,7 +35,7 @@ class Summary extends React.Component {
     var lovedForOptions = ['Great For Lunch','American','Most Booked'];
 
     return (
-      //  <div  className={style.mainReviewsSummaryDiv}>
+    //  <div  className={style.mainReviewsSummaryDiv}>
        <div  className="reviewsSummary">
 
           {this.state.summaryInformation.map((reviews, i) => (
@@ -216,8 +216,7 @@ class Summary extends React.Component {
 
          </div>
 
-
-       </div>
+         </div>
 
       )
     }
