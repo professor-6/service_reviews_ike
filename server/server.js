@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path  = require('path');
 const fs = require('fs');
 const db = require('../database/db');
 
@@ -17,7 +18,7 @@ app.listen(PORT, function(){
 
 
 // get a record from table::ratings_ambience
-app.get('/api/ratings_ambience/:id', function(req, res){
+app.get('/ratings_ambience/:id', function(req, res){
   var queryString = `SELECT * FROM ratings_ambience WHERE id = ?`;
   db.query(queryString, req.params.id, function (err, results){
     if (err){
@@ -60,7 +61,7 @@ app.get('/api/ratings_ambience/:id', function(req, res){
 // });
 
 // get all data for one restaurant
-app.get('/:id', function(req, res){
+app.get('/reviews/:id', function(req, res){
   // console.log(req.url};
   var queryString = `SELECT * FROM ratings_ambience a
                       JOIN reviews b ON b.restaurant_id = a.id
@@ -77,6 +78,12 @@ app.get('/:id', function(req, res){
 
   });
 });
+
+// fallback route
+app.get('/:id', function(req, res){
+  res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
+});
+
 
 //========= FILTERS =================
  // newest

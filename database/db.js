@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
   host : 'localhost',
   user : 'root',
   password : 'root',
-  database : 'opentable'
+  database : 'opentable_reviews'
 })
 
 connection.connect(function(err){
