@@ -92,7 +92,7 @@ class Reviews extends React.Component {
                         </div>
                 </div>
 
-                </div>
+              </div>
 
                 <div className={style.mainRating}>
 
@@ -105,16 +105,11 @@ class Reviews extends React.Component {
                                     <i className="fa fa-star" aria-hidden="true"></i>
                                     <i className="fa fa-star" aria-hidden="true"></i>
                                     <i className="fa fa-star" aria-hidden="true"></i>
-                                  </div>
+                                    Dined on {reviews.dined_at}
+                                 </div>
                           </div>
 
-                          <div  className={style.reviews} key={reviews.dined_at}>
-                              {/* Dined on {strDate(reviews.dined_at)} */}
-                              {/* Dined on {Date.parse(reviews.dined_at)} */}
-                              Dined on {reviews.dined_at}
-                              {/* Dined on {Date(reviews.dined_at).toString().slice(4, 15)} */}
 
-                          </div>
                     </div>
 
                     <div className={style.reviewBlock}>

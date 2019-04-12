@@ -9,6 +9,8 @@ class Summary extends React.Component {
 
     this.state = {
       summaryInformation : [],
+      per5 : 200,
+      barRating :  [85, 70, 50, 30, 15]
     };
   }
 
@@ -33,6 +35,7 @@ class Summary extends React.Component {
 
     var ratingCategory = ['Food','Service','Ambience','Value'];
     var lovedForOptions = ['Great For Lunch','American','Most Booked'];
+    var barRating =  [85, 70, 50, 30, 15];
 
     return (
     //  <div  className={style.mainReviewsSummaryDiv}>
@@ -57,7 +60,7 @@ class Summary extends React.Component {
                         <div className={style.number}>5</div>
                         <div className={style.container}>
                           <div className={style.progress}>
-                            <div className={style.bar5}></div>
+                            <div className={style.bar5}  style={{"width" :  Math.random()*250 }}></div>
                           </div>
                         </div>
                     </div>
@@ -66,7 +69,7 @@ class Summary extends React.Component {
                         <div className={style.number}>4</div>
                         <div className={style.container}>
                           <div className={style.progress}>
-                            <div className={style.bar4}></div>
+                            <div className={style.bar4}  style={{"width" : Math.random()*150 }}></div>
                           </div>
                         </div>
                     </div>
@@ -75,7 +78,7 @@ class Summary extends React.Component {
                         <div className={style.number}>3</div>
                         <div className={style.container}>
                           <div className={style.progress}>
-                            <div className={style.bar3}></div>
+                            <div className={style.bar3} style={{"width" : Math.random()*100  }}></div>
                           </div>
                         </div>
                     </div>
@@ -84,7 +87,7 @@ class Summary extends React.Component {
                         <div className={style.number}>2</div>
                         <div className={style.container}>
                           <div className={style.progress}>
-                            <div className={style.bar2}></div>
+                            <div className={style.bar2} style={{"width" : Math.random()*50  }}></div>
                           </div>
                         </div>
                     </div>
@@ -93,7 +96,7 @@ class Summary extends React.Component {
                         <div className={style.number}>1</div>
                         <div className={style.container}>
                           <div className={style.progress}>
-                            <div className={style.bar1}></div>
+                            <div className={style.bar1} style={{"width" : Math.random()*25  }}></div>
                           </div>
                         </div>
                     </div>
@@ -159,25 +162,12 @@ class Summary extends React.Component {
                       </div>
                     ))}
 
-                    {/* <div className={style.ratingCategory}>
-                    {ratingCategory.map((category, i) => (
-                      <div key={i}>{ratingCategory[0]}</div>
-                    ) )}
-                    </div> */}
-
-
                     <div className={style.noise}>
-                        {/* <img src={"../../images/noise.png"} /> */}
-                        {/* <img className={style.noiseImage} src="https://cdn0.iconfinder.com/data/icons/speaker-4/200/1097-512.png" /> */}
                         Noise - Moderate
                     </div>
 
                    {this.state.summaryInformation.map((recommend, i) => (
                     <div className={style.recommend} key={recommend.percent_recommend}>
-                      {/* <img src={"../../images/recommend.png"} /> */}
-                      {/* <img  src="https://png.pngtree.com/svg/20161220/9e37c64b9c.svg" /> */}
-                      {/* <span> <img  className={style.recommendImage} src="//cdn.onlinewebfonts.com/svg/img_423440.png" /> */}
-                      {/* </span> */}
                       {recommend.percent_recommend}% of people would recommend to a friend
                     </div>
                    ))}
@@ -189,19 +179,13 @@ class Summary extends React.Component {
 
          <div>
             <div id={style.lovedfor}>
-               Loved for
-              {/* <img className={style.imgLovedfor} src={"../../images/lovedfor.png"} /> */}
-              {/* <img className={style.imgLovedfor} src="https://spng.pngfly.com/20180331/evq/kisspng-exclamation-mark-symbol-computer-icons-circle-warn-exclamation-mark-5abfc772ad0717.0800397915225178747087.jpg" /> */}
-
+               Loved foR
             </div>
          </div>
 
           <div className={style.lovedFor}>
           {lovedForOptions.map((options, i) => (
               <div className={style.lovedForOptions} key={options}>
-                {/* <img className={style.img_lovedfor_icon} src={"../../images/loved.png"} /> */}
-                {/* <img className={style.img_lovedfor_icon} src="https://comps.canstockphoto.com/trophy-icon-on-white-background-eps-vector_csp51397181.jpg" /> */}
-
               {options}
                   <div className={style.subCity}> San Jose / Silicon Valley </div>
               </div>
