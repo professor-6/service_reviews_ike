@@ -48,7 +48,7 @@ class Summary extends React.Component {
 
               <div>
 
-                    <div id={style.overall} > Overall rating and reviews</div>
+               <div id={style.overall} > Overall rating and reviews</div>
 
                   <div className={style.graph}>
 

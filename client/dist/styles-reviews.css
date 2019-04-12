@@ -1,110 +1,175 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin Sans');
 
+body  {
+  font-family: Josefin Sans;
+ }
+
+ .mainReviewsDiv {
+  font-family: Josefin Sans;
+  max-width: 608px;
+  margin-left: 360px;
+ }
 
 
+ .reviewsSummary {
+  font-family: Josefin Sans;
+  max-width: 608px;
+  margin-left: 360px;
 
+ }
 #summary {
- font-weight: bold;
- font-size: 25px;
- color: #2d333f;
+  font-weight: bold;
+  font-size: 25px;
+  color: #2d333f;
+}
+
+.hline {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
 
+.vline {
+  display: block;
+  border-left: 1px solid #ccc;
+  height: 35px;
+  padding: 2px;
+  /* border: 0; */
+
+}
 
 #overall {
- font-weight: bold;
- margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #overall_one{
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #recent{
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-/*
-#ratingNumber {
- display: flex;
- justify-content: left;
-} */
+
+.overallRating {
+  display: flex;
+  justify-content: left;
+}
+
+.star {
+  margin-right: 10px;
+  align-items: center;
+}
+
+i {
+  color:  #da3743;
+}
 
 #ratingNumber {
- -webkit-column-count: 4; /* Chrome, Safari, Opera */
- -moz-column-count: 4; /* Firefox */
- column-count: 4;
+  display: flex;
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+  width: 250px;
 }
 
 #ratingCategory {
- -webkit-column-count: 4; /* Chrome, Safari, Opera */
- -moz-column-count: 4; /* Firefox */
- column-count: 4;
+
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+
 }
-/*
-#ratingCategory {
- display: flex;
- justify-content: left;
-} */
+
+.levelRating {
+
+  font-weight: 1000;
+  line-height: 1.33;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.serviceLevel {
+  font-size: 0.875rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 0px;
+}
 
 #rating {
- margin: 20;
+  /* margin: 20; */
+  justify-content: center;
+  margin-left: 5px;
 }
-
 
 
 .noise {
- margin-bottom: 20px
+  margin-bottom: 20px
 }
 
 .noise:hover {
- color : #da3743;
+  color : #da3743;
+}
+
+.noiseImage {
+  margin-left: 5px;
+  max-width: 20px;
 }
 
 .recommend {
- margin-bottom: 30px
+  margin-bottom: 30px
 }
 
 .recommend:hover {
- color : #da3743;
-}
-
-#img_lovedfor {
- align-items: center;
+  color : #da3743;
 }
 
 .lovedFor {
- display: grid;
- grid-template-columns: repeat(3, 1fr);
- grid-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
 }
 
 .lovedForOptions{
- width: 200px;
- height: 60px;
- margin-bottom: 20px;
- border-style: solid;
- border-width: medium;
- align-items: center;
- border-color:  #2d333f;
+  width: 200px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: medium;
+  align-items: center;
+  border-color:  #2d333f;
 }
 
 .lovedForOptions:hover  {
- border-color: #da3743;
- border-width: medium;
- cursor: pointer;
+  border-color: #da3743;
+  border-width: medium;
+  cursor: pointer;
+}
+
+.img_lovedfor_icon {
+  width: 5px;
+  height: auto;
+
 }
 
 .bottomTag  {
- color:  #da3743;
- margin-bottom: 20px;
+  color:  #da3743;
+  margin-bottom: 20px;
 }
 
 .bottomTag:hover  {
- text-decoration: underline;
- cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
-
-
 
 /* ================= BAR GRAPH =============== */
 .container {
@@ -165,21 +230,6 @@
 
 /* =============== Reviews Component ============== */
 
-.mainReviewsDiv {
-  font-family: Josefin Sans;
-  max-width: 608px;
-  margin-left: 360px;
- }
-
- .hline {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  margin-bottom: 20px;
-  padding: 0;
- }
 
 .sortPrompt {
  margin-top: 60px;
@@ -257,13 +307,13 @@ i {
  border-color: black; */
 }
 
-/* .picture  {
- clip-path: circle(40px at center);
- display: flex;
- justify-content: center;
-} */
+/* #reviewerPic  { */
+ /* clip-path: circle(40px at center); */
+ /* display: flex; */
+ /* justify-content: center; */
+/* } */
 
-.reviewerPicture {
+.picture {
   clip-path: circle(40px at center);
   display: flex;
   justify-content: center;
@@ -318,11 +368,6 @@ i {
  overflow: hidden;
  /* max-height: 50px; */
  position: relative;
-}
-
-.reviewCountImage {
-  margin-right: 5px;
-  max-width: 5px;
 }
 
 .reviews .readMore {
